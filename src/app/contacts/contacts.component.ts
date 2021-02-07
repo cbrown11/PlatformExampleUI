@@ -22,13 +22,14 @@ export class ContactsComponent implements OnInit {
     this.apollo
       .query<any>({
         query: gql`
-          {
-            contacts {
-              userId
-              firstName
-              lastName
-            }
+        {
+          contacts {
+            contactId
+            userId
+            firstName
+            lastName
           }
+        }
         `
       })
       .subscribe(

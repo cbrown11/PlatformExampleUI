@@ -1,0 +1,36 @@
+<h3>find contact</h3>
+
+<form class="form-inline">
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="contactId" class="sr-only">Enter Contact ID</label>
+    <input
+      [(ngModel)]="contactId"
+      type="text"
+      class="form-control"
+      name="contactId"
+      placeholder="Enter Contact ID"
+    />
+  </div>
+  <button (click)="findContact()" type="submit" class="btn btn-primary mb-2">
+    Find
+  </button>
+</form>
+
+<br />
+<div *ngIf="loading">
+  Loading...
+</div>
+
+<div>{{ error }}</div>
+
+<hr />
+<p><b>User Id:</b><span> {{ contact.userId }}</span></p>
+<p><b>Fisrt Name:</b><span> {{ contact.firstName }}</span></p>
+<p><b>Last Name:</b><span> {{ contact.lastName }}</span></p>
+<p><b>Email:</b><span> {{ contact.emailAddress }}</span></p>
+<p><b>Date Of Birth:</b><span> {{ contact.dateOfBirth }}</span></p>
+<p><b>House Number:</b><span> {{ contact.address.houseNameNumber}}</span></p>
+<p><b>Street:</b><span> {{ contact.address.street }}</span></p>
+<p><b>City:</b><span> {{ contact.address.city }}</span></p>
+<p><b>PostCode:</b><span> {{ contact.address.postcode }}</span></p>
+<p><b>Country:</b><span> {{ contact.address.country.name }}</span></p>
