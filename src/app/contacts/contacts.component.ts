@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Apollo } from "apollo-angular";
 import gql from "graphql-tag";
-
+import { ContactDetail } from '../models/contact';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
@@ -10,15 +10,15 @@ import gql from "graphql-tag";
 
 export class ContactsComponent implements OnInit {
 
+  public contacts: ContactDetail[] = [];
   
-  contacts: any[] | undefined;
-  loading = true;
-  error: any;
-  
-  
+  public loading = true;
+  public error: any;
+    
   constructor(private apollo: Apollo) {}
 
   ngOnInit() {
+   
     this.apollo
       .query<any>({
         query: gql`
@@ -46,6 +46,5 @@ export class ContactsComponent implements OnInit {
 
         }
       );
-}
-
+  }
 }

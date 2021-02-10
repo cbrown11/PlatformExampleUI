@@ -1,0 +1,875 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "ContactDetail",
+            "id": "interface-ContactDetail-59f86a5b5879f6cb590b05eb39fecb62",
+            "file": "src/app/models/contact.ts",
+            "type": "interface",
+            "sourceCode": "export interface ContactDetail {\r\n    contactId: string\r\n    userId: string\r\n    firstName: string\r\n    lastName: string\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "contactId",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "firstName",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "lastName",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "userId",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        }
+    ],
+    "injectables": [],
+    "classes": [
+        {
+            "name": "AppPage",
+            "id": "class-AppPage-e3ea1f4631d62652a5623d3ab757b2fc",
+            "file": "e2e/src/app.po.ts",
+            "type": "class",
+            "sourceCode": "import { browser, by, element } from 'protractor';\r\n\r\nexport class AppPage {\r\n  async navigateTo(): Promise<unknown> {\r\n    return browser.get(browser.baseUrl);\r\n  }\r\n\r\n  async getTitleText(): Promise<string> {\r\n    return element(by.css('app-root .content span')).getText();\r\n  }\r\n}\r\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getTitleText",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Promise<string>",
+                    "typeParameters": [],
+                    "line": 8,
+                    "modifierKind": [
+                        120
+                    ]
+                },
+                {
+                    "name": "navigateTo",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Promise<unknown>",
+                    "typeParameters": [],
+                    "line": 4,
+                    "modifierKind": [
+                        120
+                    ]
+                }
+            ],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        }
+    ],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-47aadecd4551f6c999bbf5d85f50b68c",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'graphql-angular-intro'",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.css']\r\n})\r\nexport class AppComponent {\r\n  title = 'graphql-angular-intro';\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.css"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<!--The content below is only a placeholder and can be replaced.-->\r\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\r\n  <a class=\"navbar-brand\" href=\"#\">Platform App</a>\r\n  <button\r\n    class=\"navbar-toggler\"\r\n    type=\"button\"\r\n    data-toggle=\"collapse\"\r\n    data-target=\"#navbarNavAltMarkup\"\r\n    aria-controls=\"navbarNavAltMarkup\"\r\n    aria-expanded=\"false\"\r\n    aria-label=\"Toggle navigation\"\r\n  >\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\r\n    <div class=\"navbar-nav\">\r\n      <a class=\"nav-item nav-link active\" routerLink=\"/\">Contacts</a>\r\n      <a class=\"nav-item nav-link\" routerLink=\"/find\">Find</a>\r\n      <a class=\"nav-item nav-link\" routerLink=\"/create\">Create</a>\r\n    </div>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n  <br />\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+        },
+        {
+            "name": "ContactListComponent",
+            "id": "component-ContactListComponent-02ab9df24441676f0fb01b0ad0efe6aa",
+            "file": "src/app/components/contact-list/contact-list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-contact-list",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./contact-list.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "contacts",
+                    "defaultValue": "[]",
+                    "line": 9,
+                    "type": "ContactDetail[]"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input} from '@angular/core';\r\nimport { ContactDetail } from 'src/app/models/contact';\r\n\r\n@Component({\r\n  selector: 'app-contact-list',\r\n  templateUrl: './contact-list.component.html'\r\n})\r\nexport class ContactListComponent  {\r\n  @Input() contacts: ContactDetail[] = [];\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "templateData": "<table class=\"table table-striped\">\r\n  <thead>\r\n    <tr>\r\n      <th scope=\"col\">#</th>\r\n      <th scope=\"col\">User Id</th>\r\n      <th scope=\"col\">First</th>\r\n      <th scope=\"col\">Last</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr *ngFor=\"let contact of contacts\">\r\n      <th scope=\"row\">{{ contact.contactId }}</th>\r\n      <td>{{ contact.userId }}</td>\r\n      <td>{{ contact.firstName }}</td>\r\n      <td>{{ contact.lastName }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n  "
+        },
+        {
+            "name": "ContactsComponent",
+            "id": "component-ContactsComponent-9d2ea5f5aa6524fd75ef8bb1489b9865",
+            "file": "src/app/contacts/contacts.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-contacts",
+            "styleUrls": [
+                "./contacts.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./contacts.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "contacts",
+                    "type": "any[] | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "modifierKind": [
+                        114
+                    ]
+                },
+                {
+                    "name": "error",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "modifierKind": [
+                        114
+                    ]
+                },
+                {
+                    "name": "loading",
+                    "defaultValue": "true",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "modifierKind": [
+                        114
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport { Apollo } from \"apollo-angular\";\r\nimport gql from \"graphql-tag\";\r\n@Component({\r\n  selector: 'app-contacts',\r\n  templateUrl: './contacts.component.html',\r\n  styleUrls: ['./contacts.component.css']\r\n})\r\n\r\nexport class ContactsComponent implements OnInit {\r\n\r\n  public contacts: any[] | undefined;\r\n  public loading = true;\r\n  public error: any;\r\n    \r\n  constructor(private apollo: Apollo) {}\r\n\r\n  ngOnInit() {\r\n    this.apollo\r\n      .query<any>({\r\n        query: gql`\r\n        {\r\n          contacts {\r\n            contactId\r\n            userId\r\n            firstName\r\n            lastName\r\n          }\r\n        }\r\n        `\r\n      })\r\n      .subscribe(\r\n        ({ data, loading }) => {\r\n          this.contacts = data && data.contacts;\r\n          this.loading = loading;\r\n        },\r\n        error => {\r\n          this.loading = false;\r\n          this.error = error;\r\n          console.log(\r\n            `[GraphQL error]: Message: ${error.Message}`,\r\n          );\r\n\r\n        }\r\n      );\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./contacts.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "apollo",
+                        "type": "Apollo"
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "apollo",
+                        "type": "Apollo",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>Contacts</p>\r\n\r\n<div *ngIf=\"loading\">\r\n  Loading...\r\n</div>\r\n\r\n<table class=\"table\">\r\n  <thead>\r\n    <tr>\r\n      <th scope=\"col\">Contact Id</th>\r\n      <th scope=\"col\">User Id</th>\r\n      <th scope=\"col\">First Name</th>\r\n      <th scope=\"col\">Last Name</th>\r\n    </tr>\r\n  </thead>  \r\n  <tbody>\r\n    <tr *ngFor=\"let contact of contacts\">\r\n      <th scope=\"row\">{{ contact.contactId }}</th>\r\n      <td>{{ contact.userId }}</td>\r\n      <td>{{ contact.firstName }}</td>\r\n      <td>{{ contact.lastName }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
+        },
+        {
+            "name": "FindContactComponent",
+            "id": "component-FindContactComponent-8a37d39a36314a1b7c858781ff53bac5",
+            "file": "src/app/find-contact/find-contact.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-find-contact",
+            "styleUrls": [
+                "./find-contact.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./find-contact.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "contactId",
+                    "defaultValue": "\"\"",
+                    "line": 14,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "contact",
+                    "defaultValue": "{}",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "error",
+                    "type": "string | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "loading",
+                    "defaultValue": "false",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "findContact",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Output, Input} from '@angular/core';\r\nimport { Apollo } from \"apollo-angular\";\r\nimport gql from \"graphql-tag\";\r\n\r\n@Component({\r\n  selector: 'app-find-contact',\r\n  templateUrl: './find-contact.component.html',\r\n  styleUrls: ['./find-contact.component.css']\r\n})\r\nexport class FindContactComponent  {\r\n\r\n\r\n  @Input() \r\n  contactId: string = \"\" ;\r\n\r\n  contact: any = {};\r\n  loading = false;\r\n  error: string | undefined;\r\n  constructor(private apollo: Apollo) {}\r\n\r\n\r\n  findContact() {\r\n    this.error = \"\";\r\n    this.loading = true;\r\n    this.apollo\r\n      .query<any>({\r\n        query: gql`  \r\n        query($id: String!) {\r\n          contact(id: $id) {\r\n            userId\r\n            firstName\r\n            lastName\r\n            emailAddress\r\n            dateOfBirth\r\n            address {\r\n              city\r\n              houseNameNumber\r\n              postcode\r\n              street\r\n              country {\r\n                name\r\n              }\r\n            }\r\n          }\r\n        }\r\n        `,\r\n        variables: {\r\n          id: this.contactId\r\n        }\r\n      })\r\n      .subscribe(({ data, loading }) => {\r\n        if (data.contact) this.contact = data.contact;\r\n        else this.error = \"Contact does not exits\";\r\n        this.loading = loading;\r\n      });\r\n    }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./find-contact.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "apollo",
+                        "type": "Apollo"
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "apollo",
+                        "type": "Apollo",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<h3>find contact</h3>\r\n\r\n<form class=\"form-inline\">\r\n  <div class=\"form-group mx-sm-3 mb-2\">\r\n    <label for=\"contactId\" class=\"sr-only\">Enter Contact ID</label>\r\n    <input\r\n      [(ngModel)]=\"contactId\"\r\n      type=\"text\"\r\n      class=\"form-control\"\r\n      name=\"contactId\"\r\n      placeholder=\"Enter Contact ID\"\r\n    />\r\n  </div>\r\n  <button (click)=\"findContact()\" type=\"submit\" class=\"btn btn-primary mb-2\">\r\n    Find\r\n  </button>\r\n</form>\r\n\r\n<br />\r\n<div *ngIf=\"loading\">\r\n  Loading...\r\n</div>\r\n\r\n<div>{{ error }}</div>\r\n\r\n<hr />\r\n<p><b>User Id:</b><span> {{ contact.userId }}</span></p>\r\n<p><b>Fisrt Name:</b><span> {{ contact.firstName }}</span></p>\r\n<p><b>Last Name:</b><span> {{ contact.lastName }}</span></p>\r\n<p><b>Email:</b><span> {{ contact.emailAddress }}</span></p>\r\n<p><b>Date Of Birth:</b><span> {{ contact.dateOfBirth }}</span></p>\r\n<p><b>House Number:</b><span> {{ contact.address.houseNameNumber}}</span></p>\r\n<p><b>Street:</b><span> {{ contact.address.street }}</span></p>\r\n<p><b>City:</b><span> {{ contact.address.city }}</span></p>\r\n<p><b>PostCode:</b><span> {{ contact.address.postcode }}</span></p>\r\n<p><b>Country:</b><span> {{ contact.address.country.name }}</span></p>"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "ContactListComponent"
+                        },
+                        {
+                            "name": "ContactsComponent"
+                        },
+                        {
+                            "name": "FindContactComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "GraphQLModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "GraphQLModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "configureTests",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "test-config.helper.ts",
+                "type": "",
+                "defaultValue": "(configure: ConfigureFn, compilerOptions: CompilerOptions = {}) => {\n  const compilerConfig: CompilerOptions = {\n    preserveWhitespaces: false,\n    ...compilerOptions,\n  };\n\n  const configuredTestBed = TestBed.configureCompiler(compilerConfig);\n\n  configure(configuredTestBed);\n\n  return configuredTestBed.compileComponents().then(() => configuredTestBed);\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/contact-list/contact-list.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false\r\n}"
+            },
+            {
+                "name": "mock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "setup-jest.ts",
+                "type": "",
+                "defaultValue": "() => {\n  let storage: { [key: string]: string } = {};\n  return {\n    getItem: (key: string) => (key in storage ? storage[key] : null),\n    setItem: (key: string, value: string) => (storage[key] = value || ''),\n    removeItem: (key: string) => delete storage[key],\n    clear: () => (storage = {}),\n  };\n}"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/contact-list/contact-list.stories.ts",
+                "type": "Story<ContactListComponent>",
+                "defaultValue": "(args: ContactListComponent) => ({\n  component: ContactListComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "uri",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/graphql.module.ts",
+                "type": "string",
+                "defaultValue": "'http://localhost:3000/graphql'"
+            }
+        ],
+        "functions": [
+            {
+                "name": "createApollo",
+                "file": "src/app/graphql.module.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "",
+                "args": [
+                    {
+                        "name": "httpLink"
+                    }
+                ],
+                "returnType": "ApolloClientOptions<any>",
+                "jsdoctags": [
+                    {
+                        "name": "httpLink",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
+        "typealiases": [
+            {
+                "name": "CompilerOptions",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "Partial<literal type>",
+                "file": "test-config.helper.ts",
+                "description": "",
+                "kind": 161
+            },
+            {
+                "name": "ConfigureFn",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "function",
+                "file": "test-config.helper.ts",
+                "description": "",
+                "kind": 162
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "test-config.helper.ts": [
+                {
+                    "name": "configureTests",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "test-config.helper.ts",
+                    "type": "",
+                    "defaultValue": "(configure: ConfigureFn, compilerOptions: CompilerOptions = {}) => {\n  const compilerConfig: CompilerOptions = {\n    preserveWhitespaces: false,\n    ...compilerOptions,\n  };\n\n  const configuredTestBed = TestBed.configureCompiler(compilerConfig);\n\n  configure(configuredTestBed);\n\n  return configuredTestBed.compileComponents().then(() => configuredTestBed);\n}"
+                }
+            ],
+            "src/app/components/contact-list/contact-list.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/contact-list/contact-list.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/contact-list/contact-list.stories.ts",
+                    "type": "Story<ContactListComponent>",
+                    "defaultValue": "(args: ContactListComponent) => ({\n  component: ContactListComponent,\n  props: args,\n})"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "setup-jest.ts": [
+                {
+                    "name": "mock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "setup-jest.ts",
+                    "type": "",
+                    "defaultValue": "() => {\n  let storage: { [key: string]: string } = {};\n  return {\n    getItem: (key: string) => (key in storage ? storage[key] : null),\n    setItem: (key: string, value: string) => (storage[key] = value || ''),\n    removeItem: (key: string) => delete storage[key],\n    clear: () => (storage = {}),\n  };\n}"
+                }
+            ],
+            "src/app/graphql.module.ts": [
+                {
+                    "name": "uri",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/graphql.module.ts",
+                    "type": "string",
+                    "defaultValue": "'http://localhost:3000/graphql'"
+                }
+            ]
+        },
+        "groupedFunctions": {
+            "src/app/graphql.module.ts": [
+                {
+                    "name": "createApollo",
+                    "file": "src/app/graphql.module.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "httpLink"
+                        }
+                    ],
+                    "returnType": "ApolloClientOptions<any>",
+                    "jsdoctags": [
+                        {
+                            "name": "httpLink",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "test-config.helper.ts": [
+                {
+                    "name": "CompilerOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "Partial<literal type>",
+                    "file": "test-config.helper.ts",
+                    "description": "",
+                    "kind": 161
+                },
+                {
+                    "name": "ConfigureFn",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "function",
+                    "file": "test-config.helper.ts",
+                    "description": "",
+                    "kind": 162
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "find",
+                        "component": "FindContactComponent"
+                    },
+                    {
+                        "path": "",
+                        "component": "ContactsComponent"
+                    },
+                    {
+                        "path": "**",
+                        "redirectTo": "/",
+                        "pathMatch": "full"
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "e2e/src/app.po.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "AppPage",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "setup-jest.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/contact-list/contact-list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ContactListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/contact-list/contact-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/contact-list/contact-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/contacts/contacts.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ContactsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/find-contact/find-contact.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FindContactComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql.module.ts",
+                "type": "function",
+                "linksubtype": "function",
+                "name": "createApollo",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "uri",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/contact.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ContactDetail",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "test-config.helper.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "configureTests",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

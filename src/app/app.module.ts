@@ -7,9 +7,10 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FindContactComponent } from './find-contact/find-contact.component';
+import { ContactListComponent } from "./components/contact-list/contact-list.component";
 
 @NgModule({
-  declarations: [AppComponent, ContactsComponent, FindContactComponent],
+  declarations: [AppComponent, ContactsComponent, FindContactComponent, ContactListComponent],
 
   imports: [
     BrowserModule,

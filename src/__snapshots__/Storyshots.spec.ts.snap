@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/ContactListComponent Default 1`] = `
+<storybook-dynamic-app-root
+  cfr={[Function CodegenComponentFactoryResolver]}
+  data={[Function Object]}
+  target={[Function ViewContainerRef_]}
+>
+  <app-contact-list>
+    <table
+      class="table table-striped"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            #
+          </th>
+          <th
+            scope="col"
+          >
+            User Id
+          </th>
+          <th
+            scope="col"
+          >
+            First
+          </th>
+          <th
+            scope="col"
+          >
+            Last
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <th
+            scope="row"
+          >
+            1
+          </th>
+          <td>
+            jd
+          </td>
+          <td>
+            John
+          </td>
+          <td>
+            Doe
+          </td>
+        </tr>
+        <tr>
+          <th
+            scope="row"
+          >
+            2
+          </th>
+          <td>
+            ss
+          </td>
+          <td>
+            Sam
+          </td>
+          <td>
+            Smith
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </app-contact-list>
+</storybook-dynamic-app-root>
+`;
