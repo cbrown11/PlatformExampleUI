@@ -20,17 +20,8 @@
 <div *ngIf="loading">
   Loading...
 </div>
-
 <div>{{ error }}</div>
 
-<hr />
-<p><b>User Id:</b><span> {{ contact.userId }}</span></p>
-<p><b>Fisrt Name:</b><span> {{ contact.firstName }}</span></p>
-<p><b>Last Name:</b><span> {{ contact.lastName }}</span></p>
-<p><b>Email:</b><span> {{ contact.emailAddress }}</span></p>
-<p><b>Date Of Birth:</b><span> {{ contact.dateOfBirth }}</span></p>
-<p><b>House Number:</b><span> {{ contact.address.houseNameNumber}}</span></p>
-<p><b>Street:</b><span> {{ contact.address.street }}</span></p>
-<p><b>City:</b><span> {{ contact.address.city }}</span></p>
-<p><b>PostCode:</b><span> {{ contact.address.postcode }}</span></p>
-<p><b>Country:</b><span> {{ contact.address.country.name }}</span></p>
+<div *ngIf="contact">
+  <app-contact-detail [contact]="contact"></app-contact-detail>
+</div>

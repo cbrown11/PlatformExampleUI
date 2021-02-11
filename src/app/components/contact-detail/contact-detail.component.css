@@ -1,0 +1,23 @@
+.card {
+    width: 50%;
+}
+
+.userPictureHolder {
+    background-color: #efefef;
+    display: flex;
+}
+
+.userPictureHolder  .userName {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+.userPicture {
+    padding-left: 20px;
+}
+
+.userPicture .ng-fa-icon {
+    font-size: 100px;
+}

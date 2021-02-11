@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/ContactDetailComponent default 1`] = `
+<storybook-dynamic-app-root
+  cfr={[Function CodegenComponentFactoryResolver]}
+  data={[Function Object]}
+  target={[Function ViewContainerRef_]}
+>
+  <ng-component>
+    <app-contact-detail>
+      
+      <div
+        class="card"
+      >
+        <div
+          class="userPictureHolder"
+        >
+          <div
+            class="userPicture"
+          >
+            <fa-icon
+              class="ng-fa-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-user-tie fa-w-14"
+                data-icon="user-tie"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"
+                  fill="currentColor"
+                />
+              </svg>
+            </fa-icon>
+          </div>
+          <div
+            class="userName"
+          >
+             John Doe 
+          </div>
+        </div>
+        <div
+          class="card-body"
+        >
+          <p
+            class="card-text"
+          >
+            Some quick example text.
+          </p>
+        </div>
+        <ul
+          class="list-group list-group-flush"
+        >
+          <li
+            class="list-group-item"
+          >
+            <fa-icon
+              class="ng-fa-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-envelope fa-w-16"
+                data-icon="envelope"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                  fill="currentColor"
+                />
+              </svg>
+            </fa-icon>
+             user@test.com
+          </li>
+          <li
+            class="list-group-item"
+          >
+            <strong>
+              Date of birth:
+            </strong>
+             11/01/2009
+          </li>
+        </ul>
+        <div
+          class="card-body"
+        >
+          <h5>
+            Address
+          </h5>
+           1 Test street, London, SW1 2E2, England 
+        </div>
+      </div>
+    </app-contact-detail>
+  </ng-component>
+</storybook-dynamic-app-root>
+`;
+
+exports[`Storyshots Components/ContactDetailComponent different person 1`] = `
+<storybook-dynamic-app-root
+  cfr={[Function CodegenComponentFactoryResolver]}
+  data={[Function Object]}
+  target={[Function ViewContainerRef_]}
+>
+  <ng-component>
+    <app-contact-detail>
+      
+      <div
+        class="card"
+      >
+        <div
+          class="userPictureHolder"
+        >
+          <div
+            class="userPicture"
+          >
+            <fa-icon
+              class="ng-fa-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-user-tie fa-w-14"
+                data-icon="user-tie"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"
+                  fill="currentColor"
+                />
+              </svg>
+            </fa-icon>
+          </div>
+          <div
+            class="userName"
+          >
+             Derek Eric 
+          </div>
+        </div>
+        <div
+          class="card-body"
+        >
+          <p
+            class="card-text"
+          >
+            Some quick example text.
+          </p>
+        </div>
+        <ul
+          class="list-group list-group-flush"
+        >
+          <li
+            class="list-group-item"
+          >
+            <fa-icon
+              class="ng-fa-icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-envelope fa-w-16"
+                data-icon="envelope"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                  fill="currentColor"
+                />
+              </svg>
+            </fa-icon>
+             user@test.com
+          </li>
+          <li
+            class="list-group-item"
+          >
+            <strong>
+              Date of birth:
+            </strong>
+             11/01/2009
+          </li>
+        </ul>
+        <div
+          class="card-body"
+        >
+          <h5>
+            Address
+          </h5>
+           1 Test street, London, SW1 2E2, England 
+        </div>
+      </div>
+    </app-contact-detail>
+  </ng-component>
+</storybook-dynamic-app-root>
+`;
+
+exports[`Storyshots Components/ContactListComponent default 1`] = `
+<storybook-dynamic-app-root
+  cfr={[Function CodegenComponentFactoryResolver]}
+  data={[Function Object]}
+  target={[Function ViewContainerRef_]}
+>
+  <ng-component>
+    <app-contact-list>
+      <table
+        class="table table-striped"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              #
+            </th>
+            <th
+              scope="col"
+            >
+              User Id
+            </th>
+            <th
+              scope="col"
+            >
+              First
+            </th>
+            <th
+              scope="col"
+            >
+              Last
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th
+              scope="row"
+            >
+              1
+            </th>
+            <td>
+              jd
+            </td>
+            <td>
+              John
+            </td>
+            <td>
+              Doe
+            </td>
+          </tr>
+          <tr>
+            <th
+              scope="row"
+            >
+              2
+            </th>
+            <td>
+              jd
+            </td>
+            <td>
+              John
+            </td>
+            <td>
+              Doe
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </app-contact-list>
+  </ng-component>
+</storybook-dynamic-app-root>
+`;

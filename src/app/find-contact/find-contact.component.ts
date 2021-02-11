@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, Input} from '@angular/core';
 import { Apollo } from "apollo-angular";
 import gql from "graphql-tag";
+import { ContactDetail } from '../models/contact';
 
 @Component({
   selector: 'app-find-contact',
@@ -13,11 +14,30 @@ export class FindContactComponent  {
   @Input() 
   contactId: string = "" ;
 
-  contact: any = {};
-  loading = false;
-  error: string | undefined;
-  constructor(private apollo: Apollo) {}
-
+  public contact: ContactDetail | undefined;
+  public loading = false;
+  public error: string | undefined;
+  
+  constructor(private apollo: Apollo) {
+/*
+    this.contact = {
+      contactId: '1',
+      userId: 'jd',
+      firstName: 'John',
+      lastName: 'Doe',
+      dateOfBirth: '11/01/2009',
+      emailAddress: 'test@test.com',
+      address: {
+        houseNameNumber: '1',
+        city: 'London',
+        country: { 
+          name: 'England'
+        },
+        postcode: 'SW1 2E2',
+        street: 'Test street'
+      }
+    };*/
+  }
 
   findContact() {
     this.error = "";

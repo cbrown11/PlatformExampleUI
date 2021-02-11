@@ -1,0 +1,23 @@
+<div class="card" *ngIf="contact">
+    <div class="userPictureHolder">
+        <div class="userPicture">
+            <fa-icon [icon]="['fas','user-tie']"></fa-icon>
+        </div>
+        <div class="userName">
+            {{ contact.firstName }} {{ contact.lastName }}
+        </div>
+    </div>
+    
+    <div class="card-body">
+      <p class="card-text">Some quick example text.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><fa-icon [icon]="['fas','envelope']"></fa-icon> {{ contact.emailAddress }}</li>
+      <li class="list-group-item"><strong>Date of birth:</strong> {{ contact.dateOfBirth }}</li>
+    </ul>
+    <div class="card-body">
+     <h5>Address</h5>
+     {{ contact.address.houseNameNumber}} {{ contact.address.street }}, 
+     {{ contact.address.city }}, {{ contact.address.postcode }}, {{ contact.address.country.name }}
+    </div>
+  </div>
